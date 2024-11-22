@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todos cosorro</title>
+</head>
+<body>
+    <h1>django me da ansiedad</h1>
+    <h2>list of todos</h2>
+
+    <ul>
+        {% for i in todos %}
+        <li>{{i}}</li>
+        {% endfor %}
+    </ul>
+
+
+    <h2>Add todo</h2>
+    <form action="/todo" method="post">
+    <input type="text" name="id" id="id">
+    <input type="text" name="descripcion" id="descripcion">
+    <input type="text" name="status" id="status">
+    <button type="submit">Add todo</button>
+    </form>
+</body>
+</html>
